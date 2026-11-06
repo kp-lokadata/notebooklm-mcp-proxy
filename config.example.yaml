@@ -1,0 +1,17 @@
+# Example Hermes profile config.yaml entry for notebooklm_proxy
+# Add this under the `mcp_servers:` section of
+# ~/.hermes/profiles/lokadata/config.yaml
+
+notebooklm_proxy:
+  command: /home/ubuntuvivo/notebooklm-mcp-proxy/.venv/bin/python
+  args: ["-m", "notebooklm_mcp_proxy.server"]
+  cwd: /home/ubuntuvivo/notebooklm-mcp-proxy
+  env:
+    NOTEBOOKLM_SERVER_COMMAND: /home/ubuntuvivo/.hermes/profiles/lokadata/notebooklm_mcp/.venv/bin/python
+    NOTEBOOKLM_SERVER_ARGS: '["-m", "notebooklm_mcp.cli", "-c", "notebooklm-config.json", "server"]'
+    NOTEBOOKLM_SERVER_CWD: /home/ubuntuvivo/.hermes/profiles/lokadata/notebooklm_mcp
+    NOTEBOOKLM_BACKEND: web
+    NOTEBOOKLM_HEADLESS: "true"
+    NOTEBOOKLM_PROFILE_DIR: ./chrome_profile_notebooklm
+  connect_timeout: 120.0
+  enabled: true

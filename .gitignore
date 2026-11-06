@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+env.py
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# Build
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Scratch / cache
+.cache/

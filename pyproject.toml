@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "notebooklm-mcp-proxy"
+version = "1.0.0"
+description = "MCP translation proxy between Hermes MCP client and NotebookLM FastMCP v2 server"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Lokadata", email = "kaka@lokadata.id" },
+]
+license = { text = "MIT" }
+keywords = ["mcp", "fastmcp", "notebooklm", "hermes", "proxy"]
+dependencies = [
+    "mcp>=1.0.0,<2.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+notebooklm-mcp-proxy = "notebooklm_mcp_proxy.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
