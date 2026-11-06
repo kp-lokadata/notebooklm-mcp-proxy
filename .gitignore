@@ -22,6 +22,10 @@ pip-delete-this-directory.txt
 .env
 .env.local
 
+# NotebookLM auth tokens (jangan commit ke GitHub!)
+master_token.json
+storage_state.json
+
 # Build
 build/
 dist/
